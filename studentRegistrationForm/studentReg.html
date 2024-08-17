@@ -8,36 +8,22 @@
 </head>
 <body>
     <div class="registration-container">
-        <h1>Student Registration Form</h1>
+        <h1>Blog Uploading Form</h1>
         <div class="input-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <label for="blogTitle">Blog Title</label>
+            <input type="text" id="blogTitle" name="blogTitle" placeholder="Enter the blog title" required>
         </div>
         <div class="input-group">
-            <label for="fatherName">Father's Name</label>
-            <input type="text" id="fatherName" name="fatherName" placeholder="Enter your father's name" required>
+            <label for="address">Blog Content</label>
+            <textarea id="blogContent" name="blogContent" placeholder="Enter blog content" rows="4" required></textarea>
         </div>
         <div class="input-group">
-            <label for="cnic">CNIC</label>
-            <input type="text" id="cnic" name="cnic" placeholder="Enter your CNIC" required>
+            <label for="authorName">Author Name</label>
+            <input type="text" id="authorName" name="authorName" placeholder="Enter the author name" required>
         </div>
         <div class="input-group">
-            <label for="dob">Date of Birth</label>
-            <input type="date" id="dob" name="dob" placeholder="mm/dd/yyyy" required>
-        </div>
-        <div class="input-group">
-            <label for="address">Address</label>
-            <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea>
-        </div>
-        <div class="input-group">
-            <label for="course">Course Enrolling</label>
-            <select id="course" name="course" required>
-                <option value="" disabled selected>Select a course</option>
-                <option value="math">Mathematics</option>
-                <option value="science">Science</option>
-                <option value="history">History</option>
-                <option value="english">English</option>
-            </select>
+            <label for="date">Uploading Date</label>
+            <input type="date" id="date" name="date" placeholder="Blog uploading date" required>
         </div>
         <div class="input-group">
             <label for="imageUpload">Profile Image</label>

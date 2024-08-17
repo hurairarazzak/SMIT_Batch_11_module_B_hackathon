@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging Website - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center">
+        <div class="text-xl font-bold">MyBlog</div>
+        <nav>
+            <ul class="flex space-x-4">
+                <li><a href="#" class="text-gray-700 hover:text-blue-500">Home</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500">About</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500">Blog</a></li>
+                <li><a href="#" class="text-gray-700 hover:text-blue-500">Contact</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded">Logout</button>
+        </div>
+    </header>
+
+    <!-- Dashboard Container -->
+    <div class="flex mt-6">
+
+        <!-- Sidebar -->
+        <aside class="w-1/4 bg-white p-6 shadow-md">
+            <div class="flex flex-col items-center">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="rounded-full mb-4">
+                <h2 class="text-lg font-semibold">Welcome, User!</h2>
+            </div>
+            <nav class="mt-6">
+                <ul class="space-y-2">
+                    <li><a href="#" class="block p-2 text-gray-700 hover:bg-gray-200 rounded">Dashboard Overview</a></li>
+                    <li><a href="#" class="block p-2 text-gray-700 hover:bg-gray-200 rounded">Create Post</a></li>
+                    <li><a href="#" class="block p-2 text-gray-700 hover:bg-gray-200 rounded">Manage Posts</a></li>
+                    <li><a href="#" class="block p-2 text-gray-700 hover:bg-gray-200 rounded">Settings</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="w-3/4 p-6">
+            <!-- Welcome Message and Stats -->
+            <div class="bg-white p-6 rounded shadow-md mb-6">
+                <h1 class="text-2xl font-bold">Dashboard</h1>
+                <p class="text-gray-700 mt-2">Here’s what’s happening with your blog today.</p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-3 gap-6 mb-6">
+                <div class="bg-blue-100 p-6 rounded shadow-md">
+                    <h2 class="text-lg font-semibold">Total Posts</h2>
+                    <p class="text-3xl font-bold">24</p>
+                </div>
+                <div class="bg-green-100 p-6 rounded shadow-md">
+                    <h2 class="text-lg font-semibold">Total Views</h2>
+                    <p class="text-3xl font-bold">5,238</p>
+                </div>
+                <div class="bg-yellow-100 p-6 rounded shadow-md">
+                    <h2 class="text-lg font-semibold">Comments</h2>
+                    <p class="text-3xl font-bold">76</p>
+                </div>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="bg-white p-6 rounded shadow-md">
+                <h2 class="text-xl font-bold mb-4">Recent Posts</h2>
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center">
+                        <div>
+                            <h3 class="font-semibold">How to Start a Blog</h3>
+                            <p class="text-sm text-gray-600">Published on 12th Aug, 2024</p>
+                        </div>
+                        <button class="bg-red-500 text-white px-4 py-2 rounded">Edit</button>
+                    </li>
+                    <li class="flex justify-between items-center">
+                        <div>
+                            <h3 class="font-semibold">Tips for SEO in 2024</h3>
+                            <p class="text-sm text-gray-600">Published on 10th Aug, 2024</p>
+                        </div>
+                        <button class="bg-red-500 text-white px-4 py-2 rounded">Edit</button>
+                    </li>
+                </ul>
+                <button class="mt-6 bg-blue-500 text-white px-4 py-2 rounded">Create New Post</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center p-4 mt-6 shadow-md">
+        <p class="text-gray-600">&copy; 2024 MyBlog. All Rights Reserved.</p>
+    </footer>
+
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>

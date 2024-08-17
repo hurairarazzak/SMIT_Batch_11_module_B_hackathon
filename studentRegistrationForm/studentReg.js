@@ -34,26 +34,22 @@ const storage = getStorage(app); // Get a reference to Firebase Storage
 // Define a function to handle the form submission and image upload
 window.uploadPost = function () {
   // Get form values from the HTML input elements
-  var  name = document.getElementById('name');
-  var  fatherName = document.getElementById('fatherName');
-  var  cnic = document.getElementById('cnic');
-  var  dob = document.getElementById('dob');
-  var  address = document.getElementById('address');
-  var  course = document.getElementById('course');
-  var  imageUpload = document.getElementById('imageUpload');
+  var blogTitle = document.getElementById('blogTitle');
+  var blogContent = document.getElementById('blogContent')
+  var authorName = document.getElementById('authorName');
+  var date = document.getElementById('date');
+  var imageUpload = document.getElementById('imageUpload');
 
   // Create an object with the form data
   var obj = {
-    name: name.value,
-    fatherName: fatherName.value,
-    cnic: cnic.value,
-    dob: dob.value,
-    address: address.value,
-    course: course.value,
+    blogTitle: blogTitle.value,
+    blogContent: blogContent.value,
+    authorName: authorName.value,
+    date: date.value,
   };
 
   // Check if all required fields are filled
-  if (!obj.name || !obj.fatherName || !obj.cnic || !obj.dob || !obj.address || !obj.course) {
+  if (!obj.blogTitle || !obj.blogContent || !obj.authorName || !obj.date) {
     alert('Please fill out all required fields.');
     return; // Stop execution if any field is empty
   }
@@ -67,7 +63,7 @@ window.uploadPost = function () {
         return;
       }
       console.log(files);
-      const randomNum = Math.random().toString().slice(2); // Generate a random number for the file name
+      const randomNum = Math.random().toString().slice(2); // Generate a random number for the file blogTitle
       const storageRefPath = `images/${randomNum}`; // Define the storage path for the image
       const uploadRef = storageRef(storage, storageRefPath); // Create a reference to the storage location
       const uploadTask = uploadBytesResumable(uploadRef, files); // Start the file upload
